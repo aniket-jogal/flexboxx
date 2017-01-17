@@ -1,0 +1,40 @@
+
+<div class="container-fluid text-center">
+  <div class="row content">
+      <div class=" navbar navbar-default navbar-fixed-left navbar-offset ">
+        <ul>
+          <p><a href=" #/city"><i class="fa fa-map-marker"></i>City</a></p>
+          <p><a href=" #/showtime"><i class="fa fa"></i>ShowTime</a></p>
+          <p><a href=" #/cinema"><i class="fa fa"></i>Cinemas</a></p>
+          <p><a href=" #/movie"><i class="fa fa"></i>Movies</a></p>
+          <p><a href=" #/mapping"><i class="fa fa"></i>Mapping</a></p>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<div class="nav_admin">
+    <center>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Enter the timing of show in HRS :</th>
+                    <th>Enter the timing of show in MINS:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input  ng-model="tim.showTimeHrs"/></td>
+                    <td><input  ng-model="tim.showTimeMins"/></td>
+                    <td><button ng-click="addShowTime(tim)" class="btn btn-primary"><i class="fa fa-plus"> </button></td>
+                    <td><button ng-click="updateShowTime(tim)" class="btn btn-primary"><i class="fa fa-thumbs-up"></button></td>
+                </tr>
+                <tr ng-repeat=" tim in showList">
+                    <td>{{tim.showTimeHrs}}</td>
+                    <td>{{tim.showTimeMins}}</td>
+                    <td><button ng-click="removeShowTime(tim)" class="btn btn-danger"><i class="fa fa-trash-o"></button></td>
+                    <td><button ng-click="editShowTime(tim)" class="btn btn-primary"><i class="fa fa-pencil-square-o"></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </center>

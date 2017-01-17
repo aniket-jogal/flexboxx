@@ -1,0 +1,134 @@
+<div class="container-fluid">
+
+  <div class="row">
+
+<div class=" col-sm-2">
+    <div class=" navbar navbar-default navbar-fixed-left navbar-offset ">
+      <ul>
+        <p><a href="#/city"><i class="fa fa-map-marker"></i>City</a></p>
+        <p><a href="#/showtime"><i class="fa fa"></i>ShowTime</a></p>
+        <p><a href="#/cinema"><i class="fa fa"></i>Cinemas</a></p>
+        <p><a href="#/movie"><i class="fa fa"></i>Movies</a></p>
+        <p><a href="#/mapping"><i class="fa fa"></i>Mapping</a></p>
+      </ul>
+    </div>
+  </div>
+
+
+<div class="nav_admin">
+    <center>
+        <table class="table">
+                <tr>
+                  <td>
+                    CITY
+                  </td>
+                    <td>
+                      <div>
+                      <select ng-model="mapin.City">
+                        <option ng-repeat="citee in cityList">{{citee.cityName}}</option>
+                      </select>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    THEATRE
+                  </td>
+                  <td>
+                    <div>
+                    <select ng-model="mapin.Theatre">
+                      <option ng-repeat="thtr in cinemaList | filter:mapin.City">{{thtr.theatresName}}</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  MOVIE
+                </td>
+                <td>
+                  <div>
+                    <select ng-model="mapin.Movie">
+                      <option ng-repeat="movi in moviList">{{movi.moviTitle}}</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  SHOWTIMING
+                </td>
+                <div>
+
+                    <td>
+                      <select>
+                        <option ng-repeat=" tim in showList">{{tim.showTimeHrs}}</option>
+                      </select>
+                      <select >
+                        <option ng-repeat=" tim in showList">{{tim.showTimeMins}}</option>
+                      </select>
+                      <button type="button" name="button"><i class="fa fa-plus"></i></button>
+                    </td>
+                  </div>
+                </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <select ng-model="mapin.ShowTimings" multiple="multiple">
+                        <option ng-repeat=" tim in showList">{{tim.showTimeHrs+":"+ tim.showTimeMins}}</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      FROM DATE
+                    </td>
+                    <td><input type="date" ng-model="mapin.FromDt"></td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                      TO DATE
+                    </td>
+                    <td><input type="date" ng-model="mapin.ToDt"></td>
+                  </tr>
+                  <tr>
+                    <td><button ng-click="addMapping(mapin)" class="btn btn-primary"><i class="fa fa-plus"></button></td>
+                    <td><button ng-click="updateMapping(mapin)" class="btn btn-primary"><i class="fa fa-thumbs-up"></button></td>
+                  </tr>
+              </table>
+            </center>
+          </div>
+            <div class="maplist ,col-sm-10">
+              <center>
+              <table class="table table-bordered ">
+                <thead>
+
+            <tr>
+              <th>CITY</th>
+              <th>THEATRE</th>
+              <th>MOVIE</th>
+              <th>TIMING</th>
+              <th>FROM DATE - TO DATE</th>
+            </tr>
+          </thead>
+          <tbody>
+
+
+                <tr ng-repeat="mapin in MapList">
+                    <td>{{mapin.City}}</td>
+                    <td>{{mapin.Theatre}}</td>
+                    <td>{{mapin.Movie}}</td>
+                    <td>{{mapin.ShowTimings}}</td>
+                    <td>{{mapin.FromDt+"-"+mapin.ToDt | date:'dd, MMM yyyy'}}</td>
+                    <td><button ng-click="removeMapping(mapin)" class="btn btn-danger"><i class="fa fa-trash-o"></button></td>
+                    <td><button ng-click="editMapping(mapin)" class="btn btn-primary"><i class="fa fa-pencil-square-o"></button></td>
+                </tr>
+
+              </tbody>
+        </table>
+      </center>
+      </div>
+</div>
+</div>
+</div>

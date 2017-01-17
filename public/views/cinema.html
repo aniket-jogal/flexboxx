@@ -1,0 +1,52 @@
+<div class="">
+
+<div class="container-fluid text-center" class="col-sm-2">
+  <div class="row content">
+      <div class=" navbar navbar-default navbar-fixed-left navbar-offset ">
+        <ul>
+          <p><a href=" #/city"><i class="fa fa-map-marker"></i>City</a></p>
+          <p><a href=" #/showtime"><i class="fa fa"></i>ShowTime</a></p>
+          <p><a href=" #/cinema"><i class="fa fa"></i>Cinemas</a></p>
+          <p><a href=" #/movie"><i class="fa fa"></i>Movies</a></p>
+          <p><a href=" #/mapping"><i class="fa fa"></i>Mapping</a></p>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div class="nav_admin" class="col-sm-10">
+    <center>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name of City:</th>
+                    <th>Enter the Cinema name:</th>
+                    <th>location in City:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td>
+                      <select ng-model="thtr.theatresCity">
+                        <option ng-repeat="citee in cityList">{{citee.cityName}}</option>
+                      </select>
+                    </td>
+                    <td><input ng-model="thtr.theatresName"/></td>
+                    <td><input ng-model="thtr.theatresLocation"/></td>
+
+                    <td><button ng-click="addCinema(thtr)" class="btn btn-primary"><i class="fa fa-plus"></button></td>
+                    <td><button ng-click="updateCinema(thtr)" class="btn btn-primary"><i class="fa fa-thumbs-up"></button></td>
+                </tr>
+                <tr ng-repeat=" thtr in cinemaList">
+                    <td>{{thtr.theatresCity}}</td>
+                    <td>{{thtr.theatresName}}</td>
+                    <td>{{thtr.theatresLocation}}</td>
+                    <td><button ng-click="removeCinema(thtr)" class="btn btn-danger"><i class="fa fa-trash-o"></button></td>
+                    <td><button ng-click="editCinema(thtr)" class="btn btn-primary"><i class="fa fa-pencil-square-o"></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+  </div>
+</div>
