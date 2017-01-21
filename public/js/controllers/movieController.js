@@ -16,7 +16,8 @@ module.exports   = function($scope, $http) {
           $http.get(`http://www.omdbapi.com/?t=${movi.moviTitle}&plot=short&r=json`).success(function (response) {
                             var movieObj={};
                             for(var key in response){
-                                if(key=='Title' || key== 'Language' || key== 'Poster' || key== 'Genre' || key== 'Director' || key== 'Actors' || key=='Year'){
+                                if(key=='Title' || key== 'Language' || key== 'Poster' || key== 'Genre' || key== 'Director' || key== 'Actors' || key=='Year'
+                                ||key=='Runtime'||key=='Descreption'){
                                     movieObj[key] = response[key];
                                 }
                             }

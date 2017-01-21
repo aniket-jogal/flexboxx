@@ -60,6 +60,7 @@ li{
     margin: auto;
     height: auto;
     }
+
 .maplist {
   padding:225px;
 }
@@ -107,8 +108,8 @@ p{
   font-size:18px;
 }
 .screen{
-  margin-left: 250px;
-  width: 500px;
+  margin-left: 150px;
+  width: 200px;
   border-radius: 6px 12px 48px 48px;
   color: orange;
   text-align: center;
@@ -149,4 +150,86 @@ div.h3
   font-style:normal;
   font-family: monospace;
 
+}
+
+.line {
+    width: 639px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 18px;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.bank-select{
+
+
+
+}
+.qwe {
+  display:block;
+
+}
+.nav .navbar-nav{
+  color: white;
+
+}
+
+
+.DoM{
+  display: -webkit-inline-box;
+}
+
+.DST{
+
+  display:-webkit-inline-box;
+}
+
+.dcdD{
+  display:-webkit-inline-box;
+}
+
+.rowA{
+  margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.rowB{
+  margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 36px;
+    margin-left: 26px;
+}
+
+.rowC{
+  margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 36px;
+    margin-left: 48px;
+}
+.rowD{
+  margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 36px;
+    margin-left: 70px;
+}
+.rowE{
+  margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 36px;
+    margin-left: 100px;
+}
+.rowF{
+  margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 36px;
+    margin-left: 130px;
+}
+.rowG{
+  margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 36px;
+    margin-left: 150px;
 }

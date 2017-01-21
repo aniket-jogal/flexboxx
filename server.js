@@ -1,6 +1,10 @@
-
 var logger   = require('morgan' );
 var express  = require('express');
+
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var session = require('cookie-session');
+
 
 var movies   = require('./cruds/movie-crud'  );
 var cinemas  = require('./cruds/cinema-crud' );
@@ -8,6 +12,7 @@ var cities   = require('./cruds/city-crud'   );
 var showtime = require('./cruds/time-crud'   );
 var user     = require('./cruds/user-crud'   );
 var maping   = require('./cruds/mapping-crud');
+var authin   = require('./cruds/auth'        );
 // var seatCrud = require('./cruds/seat-crud'   );
 
 var bodyParser=require('body-parser');
@@ -21,6 +26,7 @@ app.use('/cinema',cinemas    );
 app.use('/city',cities       );
 app.use('/showtime',showtime );
 app.use('/mapping',maping    );
+app.use('/', authin);
 //app.use('/user',user         )
 // app.use('/seat', seatCrud);
 
@@ -36,6 +42,9 @@ db.once('open', function(){
   console.log("Connected to DB");
 });
 
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 if (app.get('env') === 'development') {
   var webpackMiddleware = require("webpack-dev-middleware");

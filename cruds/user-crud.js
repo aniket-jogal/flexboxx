@@ -12,10 +12,8 @@ var userSchema = mongoose.Schema({
   FirstName :String,
   LastName  :String,
   Address   :String,
-  // DoB       :String,
   Email     :String,
   ContactNo :String,
-  // Gender    :String
 
 });
 

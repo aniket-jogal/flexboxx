@@ -1,48 +1,52 @@
-<div class="container-fluid">
-<div class="col-sm-3">
-<h3>TITLE:{{movi.moviTitle}}</h3>
-<img src="{{movi.moviPoster}}" alt="POSTER"  width="250" height="350">
-</div>
-  <div class="details" class="col-sm-9">
-  <h4>   DIRECTORS:{{movi.moviDirector}}</h4>
-  <h4>   ACTORS:   {{movi.moviActors}}</h4>
-  <h4>   LANGUAGE: {{movi.moviLanguage}}</h4>
-  <h4>   GENRE:    {{movi.moviGenre}}</h4>
+<div class="container">
+  <h2>Show Details</h2>
+  <br>
+  <div class="col-sm-3">
+    <div ng-repeat="j in movi">
+      <img src="{{j.moviPoster}}" alt="POSTER"  width="250" height="350" ><br/>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <div ng-repeat="k in movi">
+      <h4>TITLE:      {{k.moviTitle}}</h4>
+      <h4>DIRECTOR:   {{k.moviDirector}}</h4>
+      <h4>ACTORS:     {{k.moviActors}}</h4>
+      <h4>LANGUAGE:   {{k.moviLanguage}}</h4>
+    </div>
   </div>
 </div>
-</br>
-  <div class="row">
-  <DIV class="col-sm-6">
-    <b>Select City</b>
-  <select ng-model="mapin.City">
-      <option ng-repeat="mapin in MapList">{{mapin.City}}</option>
-  </select>
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-6">
+    <h4>Select City</h4>
+    <select ng-model="mapin.City">
+      <option ng-repeat="x in mapping">{{x.City}}</option>
+    </select>
   </div>
   <div class="col-sm-6">
-  <b>Select Date</b>
-  <select ng-model="mapin.Date">
-    <option ng-repeat="date in moviDate">{{date | date:'dd, MMM yyyy'}}</option>
-  </select>
-  </DIV>
+    <h4>Select Date</h4>
+    <select ng-model="mapin.Date">
+      <option ng-repeat="x in movieDates">{{x|date:'dd,MM,yyyy'}}</option>
+    </select>
   </div>
-  <div class="row">
-  <div class="col-sm-11"><table style="height:100%;width:100%" class="table table-inverse">
-    <tr>
-      <!--<th>CITY</th>-->
-      <th>THEATRE</th>
-      <th>DATE</th>
-      <th colspan="3" style="text-align:center">SHOWTIMINGS</th>
+</div>
+</div>
+
+<div class="container">
+  <div class="col-sm-12">
+    <table>
+      <tr>
+      <th>Theatre</th>
+      <th>Date</th>
+      <th>Showtiming</th>
     </tr>
-    <tr ng-show="mapin.Date" ng-repeat="book in booking | filter : mapin.City | filter : mapin.Date">
-      <!--<td>{{m.City}}</td>-->
+    <tr ng-show="mapin.Date" ng-repeat="m in booking">
       <td>{{m.Theatre}}</td>
-      <td>{{m.Date | date:'dd, MMM yyyy'}}</td>
+      <td>{{m.Date}}</td>
       <td ng-repeat="t in m.ShowTimings">
-        <button ng-click="setShow(t,m.Theatre,m.Date,m.City)" style=" background:none!important;border:none;padding:0!important;font: inherit;color:blue;border-bottom:1px solid blue;cursor: pointer;">{{t}}</button></td>
+      <a href="#/seats" ng-click="setShow(t,m.Theatre,m.Date,m.City)">{{t}}</button></td>
     </tr>
-  </table>
+    </table>
   </div>
-  </div>
-  <br/><br/><br/><br/><br/><br/>
-<center><a href="#/seats" ng-click="setShow()" class="button-color btn btn-primary" role="button">Proceed</a></center>
-  </div>
+</div>

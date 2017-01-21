@@ -1,7 +1,5 @@
 <div class="container-fluid">
-
   <div class="row">
-
 <div class=" col-sm-2">
     <div class=" navbar navbar-default navbar-fixed-left navbar-offset ">
       <ul>
@@ -81,16 +79,9 @@
                   </tr>
                   <tr>
                     <td>
-                      FROM DATE
+                      DATE
                     </td>
-                    <td><input type="date" ng-model="mapin.FromDt"></td>
-                  </tr>
-                  <tr>
-                    <td>
-
-                      TO DATE
-                    </td>
-                    <td><input type="date" ng-model="mapin.ToDt"></td>
+                    <td><input type="date" ng-model="mapin.Date"></td>
                   </tr>
                   <tr>
                     <td><button ng-click="addMapping(mapin)" class="btn btn-primary"><i class="fa fa-plus"></button></td>
@@ -109,7 +100,7 @@
               <th>THEATRE</th>
               <th>MOVIE</th>
               <th>TIMING</th>
-              <th>FROM DATE - TO DATE</th>
+              <th>DATE</th>
             </tr>
           </thead>
           <tbody>
@@ -120,7 +111,7 @@
                     <td>{{mapin.Theatre}}</td>
                     <td>{{mapin.Movie}}</td>
                     <td>{{mapin.ShowTimings}}</td>
-                    <td>{{mapin.FromDt+"-"+mapin.ToDt | date:'dd, MMM yyyy'}}</td>
+                    <td>{{mapin.Date | date:'dd,MM yyyy'}}</td>
                     <td><button ng-click="removeMapping(mapin)" class="btn btn-danger"><i class="fa fa-trash-o"></button></td>
                     <td><button ng-click="editMapping(mapin)" class="btn btn-primary"><i class="fa fa-pencil-square-o"></button></td>
                 </tr>

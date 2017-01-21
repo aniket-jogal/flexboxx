@@ -9,15 +9,16 @@ var mongoose = require('mongoose');
 
 var movieSchema = mongoose.Schema({
 
-   moviTitle    : String,
-   moviLanguage : String,
-   moviGenre    : String,
-   moviPoster   : String,
-   moviDirector : String,
-   moviActors   : String,
-   moviYear     : String,
-   moviRuntime  : String,
-   status       : String
+   moviTitle       : String,
+   moviLanguage    : String,
+   moviGenre       : String,
+   moviPoster      : String,
+   moviDirector    : String,
+   moviActors      : String,
+   moviYear        : String,
+   moviRuntime     : String,
+   moviDescription : String,
+   status          : String
  });
 
 var Movie = mongoose.model('Movie', movieSchema, 'movie');
@@ -37,26 +38,37 @@ router.get('/getMovie/:id', function (req, res) {
     });
 });
 
+router.get('/moviPoster/:p', function (req, res) {
+    Movie.find({moviTitle:req.params.p}, function (err, docs) {
+         res.json(docs);
+    });
+});
+
 router.post('/addMovie', function(req, res){
  console.log(req.body);
 
-  var title      = req.body.Title    ;
-  var language   = req.body.Language ;
-  var genre      = req.body.Genre    ;
-  var poster     = req.body.Poster   ;
-  var director   = req.body.Director ;
-  var actors     = req.body.Actors   ;
-
+  var title      = req.body.Title      ;
+  var language   = req.body.Language   ;
+  var genre      = req.body.Genre      ;
+  var poster     = req.body.Poster     ;
+  var director   = req.body.Director   ;
+  var actors     = req.body.Actors     ;
+  var year       = req.body.Year       ;
+  var runtime    = req.body.Runtime    ;
+  var descript   = req.body.Description;
 
   var movie      = new Movie({
 
-    moviTitle    : title    ,
-    moviLanguage : language ,
-    moviGenre    : genre    ,
-    moviPoster   : poster   ,
-    moviDirector : director ,
-    moviActors   : actors   ,
-    status       : "false"
+    moviTitle       : title    ,
+    moviLanguage    : language ,
+    moviGenre       : genre    ,
+    moviPoster      : poster   ,
+    moviDirector    : director ,
+    moviActors      : actors   ,
+    moviYear        : year     ,
+    moviRuntime     : runtime  ,
+    moviDescription : descript ,
+    status          : "false"
 
   });
 
@@ -93,14 +105,7 @@ router.put('/updateMovie/:moviTitle/:val',function(req,res){
     function(err,docs){
   res.json(docs);
   });
-});
-
-router.get('/moviePoster/:t', function (req, res) {
-    Movie.find({Title:req.params.t}, function (err, docs) {
-    res.json(docs);
-    });
-});
-
+})
 
 router.use(function(req, res, next) {
   var err = new Error('Not Found');

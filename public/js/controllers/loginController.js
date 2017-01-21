@@ -1,14 +1,14 @@
-'use strict';
+module.exports = function($scope, $http, $rootScope) {
 
-module.exports = function($scope, $http) {
+  $scope.login= function (user){
 
-  var refresh = function () {
-        $http.get('/user/getUser').success(function (response) {
-            console.log('READ IS SUCCESSFUL');
-            $scope.userList = response;
-            $scope.user= "";
-        });
-    };
+    console.log(user);
+    $http.post('/login' , user).success(function(response){
 
+      console.log(response);
+      $rootScope.currentUser = user;
+    });
 
-}
+  };
+
+};

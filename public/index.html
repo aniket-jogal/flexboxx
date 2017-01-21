@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="/build/bundle.js"></script>
 </head>
@@ -21,12 +22,13 @@
 
           <ul class="nav navbar-nav navbar-left">
             <li><a href="#/"><i class="fa fa-home"></i>Home</a></li>
-            <li><a href="#/booking"><i class="fa fa-shield"></i>Booking</a></li>
-            <li><a href="#/cancellation"><i class="fa fa-comment"></i>Cancellation</a></li>
-            <li><a href="#/seatselection">Seatsselection</a></li>
+            <!-- <li><a href="#/cancellation"><i class="fa fa-comment"></i>Cancellation</a></li> -->
+
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/login"><i class="fa fa-user"></i>Login</a>
+            <li ng-show="!currentUser"><a class="color-me" href="#/login"><i class="fa fa-user"></i>Login</a></li>
+            <li ng-show="!currentUser"><a class="color-me" href="#/register"><i class="fa fa-user"></i>Register</a></li>
+            <li ng-show = "currentUser"><a class="color-me" href="#/start" ng-click="logout()"><i class="glyphicon glyphicon-remove"></i> Logout</a></li>
             <li><a href="#/admin"><i class="fa fa-user"></i>Admin</a>
           </ul>
 

@@ -45,19 +45,16 @@
 </div>
 
 <br/>
-<div class="container-fluid">
-      <div class="">
-        <p><h3>Now Playing</h3></p>
-
+<div class="container">
+        <p><h2>Now Playing</h2></p>
         <div class="movies-wrapper ">
           <div class="movies-container" ng-repeat="movi in moviList| filter:{status:'true'}">
             <img class="movie-poster" ng-src={{movi.moviPoster}} />
             <span class="movie-title">Title : {{movi.moviTitle}}</span>
             <span class="movie-title">Genre : {{movi.moviGenre}}</span>
-            <button ng-click="bookMovie(movi)" href="#/show" class="button-color book btn btn-danger ">Book</button>
+            <a href="#/show" ng-click="setMovie(movi.moviTitle)" class="btn btn-primary"role="button">Book</a>
           </div>
         </div>
-      </div>
     </div>
 
   </div>

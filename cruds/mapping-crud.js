@@ -10,8 +10,7 @@ bodyParser= require('body-parser');
    Theatre     : String,
    ShowTimings : Array,
    Movie       : String,
-   FromDt      : String,
-   ToDt        : String
+   Date        : String
  });
 
 var Mapping = mongoose.model('Mapping',mappingSchema,'mapping');
@@ -36,16 +35,16 @@ router.post('/addMapping', function(req, res){
   var theatre = req.body.Theatre    ;
   var movie   = req.body.Movie      ;
   var swtm    = req.body.ShowTimings;
-  var frmdt   = req.body.FromDt     ;
-  var todt    = req.body.ToDt       ;
+  var dt      = req.body.Date       ;
+
 
   var mapping = new Mapping({
-    City        : city,
+    City        : city   ,
     Theatre     : theatre,
-    Movie       : movie,
-    ShowTimings : swtm,
-    FromDt      : frmdt,
-    ToDt        : todt
+    Movie       : movie  ,
+    ShowTimings : swtm   ,
+    Date        : dt     ,
+
   });
 
   mapping.save(function(err, docs){
@@ -70,6 +69,13 @@ router.put('/updateMapping/:id', function(req, res){
     res.json(data);
     });
 })
+
+router.get('/selectMovie/:m',function(req, res){
+  Mapping.find({Movie:req.params.m},function(err, docs){
+    res.json(docs);
+  });
+})
+
 
 router.use(function(req, res, next) {
   var err = new Error('Not Found');

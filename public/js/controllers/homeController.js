@@ -12,5 +12,11 @@ module.exports = function($scope, $http) {
      };
      refresh();
 
+     $scope.setMovie=function(movi)
+     {
+       sessionStorage
+       .setItem('moviName',movi);
+      //  $location.path("/show");
+     };
 
-};
+  };

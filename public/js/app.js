@@ -26,10 +26,6 @@ app.config(function($routeProvider){
     templateUrl: 'views/cinema.html',
     controller : 'CinemaController',
   })
-  .when('/trailer', {
-    templateUrl: 'views/trailer.html',
-    controller : 'TrailerController',
-  })
   .when('/login',{
     templateUrl:'views/login.html',
     controller :'LoginController',
@@ -37,6 +33,10 @@ app.config(function($routeProvider){
   .when('/admin',{
     templateUrl:'views/admin.html',
     controller :'AdminController',
+    resolve: {
+        logincheck: checkLoggedin
+        }
+
   })
   .when('/city', {
     templateUrl: 'views/city.html',
@@ -54,16 +54,62 @@ app.config(function($routeProvider){
     templateUrl : 'views/show.html',
     controller  :'BookingController',
   })
-  .when('/booking',{
+  .when('/seats',{
     templateUrl: 'views/seats.html',
     controller :'SeatsController',
   })
-  // .when('/seatselection',{
-  //   templateUrl: 'views/seatselection.html',
-  //   controller: 'SeatselectionController'
-  // })
-.otherwise({
+  .when('/payment', {
+    templateUrl: 'views/payment.html',
+    controller : 'PaymentController',
+  })
+
+    .when('/login', {
+
+      templateUrl: 'views/login.html',
+      controller: 'LoginController',
+    })
+    .when('/register', {
+
+      templateUrl: 'views/register.html',
+      controller: 'RegisterController',
+    })
+
+  .otherwise({
     redirectTo: '/home',
   });
+
+});
+
+
+var checkLoggedin = function($q, $timeout, $http, $location, $rootScope)
+{
+    var deferred = $q.defer();
+
+    $http.get('/loggedin').success(function(user)
+    {
+        $rootScope.errorMessage = null;
+        // User is Authenticated
+        if (user !== '0')
+            deferred.resolve();
+        // User is Not Authenticated
+        else
+        {
+            $rootScope.errorMessage = 'You need to log in.';
+            deferred.reject();
+            $location.url('/login');
+        }
+    });
+
+    return deferred.promise;
+};
+
+
+app.controller("NavCtrl", function($rootScope,$scope, $http, $location){
+  $scope.logout= function()
+  {
+     $http.post("/logout").success(function(){
+       $location.url('/home');
+     });
+  }
 
 });

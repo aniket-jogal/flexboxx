@@ -1,208 +1,172 @@
-<div class="row">
-  <br/><br/><br/>
-  <div class="col-xs-12">
-    <div class="col-md-12" ;width:95%; border-radius:10px; border-color:black;font-family:serif>
-    <center>  <h1 class="text-center">
-        WELCOME TO THE SEAT BOOKING PAGE
-      </h1>
-    </center>
-    </div>
-    <br/><br/>
+<div class="container" >
 
-<div class="col-md-12">
-    <table class="table table-condensed" style="text-align:center">
+<form>
+<!-- GOLD : <input id="toggleElement" type="radio" name="toggle"  />
+SILVER:<input id="toggleElement1" type="radio" name="toggle" /> -->
+<label>SELECT CLASS</label>
+<select id="selectClass" class="selectpicker selectClass claculate" data-rule-requried="true" >
+  <option value="">SELECT</option>
+  <option value="250">Gold -Rs250/-</option>
+  <option value="200">Silver-Rs200/-</option>
+</select>
+
+</form>
+
+
+<br>
+
+<form>
+
+ <label>SELECT NO. SEATS</label>
+  <select id="selectSeats" class="selectpicker selectSeats calculate" data-rule-requried="true" >
+    <option value=""></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+</form>
+</div>
+
+<br>
+
+<div class="container" class="col-sm-8">
+  <div class="gold" id ="gold">
+  <div class="rowA" id="rowA">
+  <form id="RowA" name="RowA" >
+  <input type="checkbox" class="gldCls" value="A1"><span class="fa fa-wheelchair"></span> A1</input>
+  <input type="checkbox" class="gldCls" value="A2"><span class="fa fa-wheelchair"></span> A2</input>
+  <input type="checkbox" class="gldCls" value="A3"><span class="fa fa-wheelchair"></span> A3</input>
+  <input type="checkbox" class="gldCls" value="A4"><span class="fa fa-wheelchair"></span> A4</input>
+  <input type="checkbox" class="gldCls" value="A5"><span class="fa fa-wheelchair"></span> A5</input>
+  <input type="checkbox" class="gldCls" value="A6"><span class="fa fa-wheelchair"></span> A6</input>
+  <input type="checkbox" class="gldCls" value="A7"><span class="fa fa-wheelchair"></span> A7</input>
+  <input type="checkbox" class="gldCls" value="A8"><span class="fa fa-wheelchair"></span> A8</input>
+  <input type="checkbox" class="gldCls" value="A9"><span class="fa fa-wheelchair"></span> A9</input>
+  <input type="checkbox" class="gldCls" value="A10"><span class="fa fa-wheelchair"></span> A10</input>
+  <input type="checkbox" class="gldCls" value="A11"><span class="fa fa-wheelchair"></span> A11</input>
+  <input type="checkbox" class="gldCls" value="A12"><span class="fa fa-wheelchair"></span> A12</input>
+</form>
+</div>
+
+<div class="rowB" id="rowB">
+  <!-- <input type="checkbox" name="gldCls" value="b1" disabled=""> -->
+  <input type="checkbox" class="gldCls" value="B1"><span class="fa fa-wheelchair"></span> B1</input>
+  <input type="checkbox" class="gldCls" value="B2"><span class="fa fa-wheelchair"></span> B2</input>
+  <input type="checkbox" class="gldCls" value="B3"><span class="fa fa-wheelchair"></span> B3</input>
+  <input type="checkbox" class="gldCls" value="B4"><span class="fa fa-wheelchair"></span> B4</input>
+  <input type="checkbox" class="gldCls" value="B5"><span class="fa fa-wheelchair"></span> B5</input>
+  <input type="checkbox" class="gldCls" value="B6"><span class="fa fa-wheelchair"></span> B6</input>
+  <input type="checkbox" class="gldCls" value="B7"><span class="fa fa-wheelchair"></span> B7</input>
+  <input type="checkbox" class="gldCls" value="B8"><span class="fa fa-wheelchair"></span> B8</input>
+  <input type="checkbox" class="gldCls" value="B9"><span class="fa fa-wheelchair"></span> B9</input>
+  <input type="checkbox" class="gldCls" value="B10"><span class="fa fa-wheelchair"></span> B10</input>
+  <input type="checkbox" class="gldCls" value="B11"><span class="fa fa-wheelchair"></span> B11</input>
+</div>
+<div class="rowC" id="rowC">
+  <!-- <input type="checkbox" name="gldCls" value="b1" disabled="">
+  <input type="checkbox" name="gldCls" value="b1" disabled=""> -->
+  <input type="checkbox" class="gldCls" value="C1"><span class="fa fa-wheelchair"></span> C1</input>
+  <input type="checkbox" class="gldCls" value="C2"><span class="fa fa-wheelchair"></span> C2</input>
+  <input type="checkbox" class="gldCls" value="C3"><span class="fa fa-wheelchair"></span> C3</input>
+  <input type="checkbox" class="gldCls" value="C4"><span class="fa fa-wheelchair"></span> C4</input>
+  <input type="checkbox" class="gldCls" value="C5"><span class="fa fa-wheelchair"></span> C5</input>
+  <input type="checkbox" class="gldCls" value="C6"><span class="fa fa-wheelchair"></span> C6</input>
+  <input type="checkbox" class="gldCls" value="C7"><span class="fa fa-wheelchair"></span> C7</input>
+  <input type="checkbox" class="gldCls" value="C8"><span class="fa fa-wheelchair"></span> C8</input>
+  <input type="checkbox" class="gldCls" value="C9"><span class="fa fa-wheelchair"></span> C9</input>
+  <input type="checkbox" class="gldCls" value="C10"><span class="fa fa-wheelchair"></span> C10</input>
+</div>
+<hr class="line">
+<div class="rowD" id="rowD">
+  <input type="checkbox" class="slrCls" value="D1"><span class="fa fa-wheelchair"></span> D1</input>
+  <input type="checkbox" class="slrCls" value="D2"><span class="fa fa-wheelchair"></span> D2</input>
+  <input type="checkbox" class="slrCls" value="D3"><span class="fa fa-wheelchair"></span> D3</input>
+  <input type="checkbox" class="slrCls" value="D4"><span class="fa fa-wheelchair"></span> D4</input>
+  <input type="checkbox" class="slrCls" value="D5"><span class="fa fa-wheelchair"></span> D5</input>
+  <input type="checkbox" class="slrCls" value="D6"><span class="fa fa-wheelchair"></span> D6</input>
+  <input type="checkbox" class="slrCls" value="D7"><span class="fa fa-wheelchair"></span> D7</input>
+  <input type="checkbox" class="slrCls" value="D8"><span class="fa fa-wheelchair"></span> D8</input>
+  <input type="checkbox" class="slrCls" value="D9"><span class="fa fa-wheelchair"></span> D9</input>
+  <input type="checkbox" class="slrCls" value="D10"><span class="fa fa-wheelchair"></span> D10</input>
+  <!-- <input type="checkbox" class="btn btn-info" value="C11"><span class="fa fa-wheelchair"></span> C11</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="C12"><span class="fa fa-wheelchair"></span> B12</input> -->
+</div>
+<div class="rowE" id="rowE">
+  <!-- <input type="checkbox" name="gldCls" value="b1" disabled=""> -->
+  <input type="checkbox" class="slrCls" value="E1"><span class="fa fa-wheelchair"></span> E1</input>
+  <input type="checkbox" class="slrCls" value="E2"><span class="fa fa-wheelchair"></span> E2</input>
+  <input type="checkbox" class="slrCls" value="E3"><span class="fa fa-wheelchair"></span> E3</input>
+  <input type="checkbox" class="slrCls" value="E4"><span class="fa fa-wheelchair"></span> E4</input>
+  <input type="checkbox" class="slrCls" value="E5"><span class="fa fa-wheelchair"></span> E5</input>
+  <input type="checkbox" class="slrCls" value="E6"><span class="fa fa-wheelchair"></span> E6</input>
+  <input type="checkbox" class="slrCls" value="E7"><span class="fa fa-wheelchair"></span> E7</input>
+  <input type="checkbox" class="slrCls" value="E8"><span class="fa fa-wheelchair"></span> E8</input>
+  <input type="checkbox" class="slrCls" value="E9"><span class="fa fa-wheelchair"></span> E9</input>
+  <!-- <input type="checkbox" class="btn btn-info" value="D10"><span class="fa fa-wheelchair"></span> E10</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="C11"><span class="fa fa-wheelchair"></span> C11</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="C12"><span class="fa fa-wheelchair"></span> B12</input> -->
+</div>
+<div class="rowF" id="rowF">
+  <!-- <input type="checkbox" name="gldCls" value="b1" disabled="">
+  <input type="checkbox" name="gldCls" value="b1" disabled=""> -->
+  <input type="checkbox" class="slrCls" value="F1"><span class="fa fa-wheelchair"></span> F1</input>
+  <input type="checkbox" class="slrCls" value="F2"><span class="fa fa-wheelchair"></span> F2</input>
+  <input type="checkbox" class="slrCls" value="F3"><span class="fa fa-wheelchair"></span> F3</input>
+  <input type="checkbox" class="slrCls" value="F4"><span class="fa fa-wheelchair"></span> F4</input>
+  <input type="checkbox" class="slrCls" value="F5"><span class="fa fa-wheelchair"></span> F5</input>
+  <input type="checkbox" class="slrCls" value="F6"><span class="fa fa-wheelchair"></span> F6</input>
+  <input type="checkbox" class="slrCls" value="F7"><span class="fa fa-wheelchair"></span> F7</input>
+  <input type="checkbox" class="slrCls" value="F8"><span class="fa fa-wheelchair"></span> F8</input>
+  <!-- <input type="checkbox" class="btn btn-info" value="E9"><span class="fa fa-wheelchair"></span> E9</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="D10"><span class="fa fa-wheelchair"></span> E10</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="C11"><span class="fa fa-wheelchair"></span> C11</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="C12"><span class="fa fa-wheelchair"></span> B12</input> -->
+</div>
+<div class="rowG" id="rowG">
+  <!-- <input type="checkbox" name="gldCls" value="b1" disabled="">
+  <input type="checkbox" name="gldCls" value="b1" disabled="">
+  <input type="checkbox" name="gldCls" value="b1" disabled=""> -->
+  <input type="checkbox" class="slrCls" value="G1"><span class="fa fa-wheelchair"></span> G1</input>
+  <input type="checkbox" class="slrCls" value="G2"><span class="fa fa-wheelchair"></span> G2</input>
+  <input type="checkbox" class="slrCls" value="G3"><span class="fa fa-wheelchair"></span> G3</input>
+  <input type="checkbox" class="slrCls" value="G4"><span class="fa fa-wheelchair"></span> G4</input>
+  <input type="checkbox" class="slrCls" value="G5"><span class="fa fa-wheelchair"></span> G5</input>
+  <input type="checkbox" class="slrCls" value="G6"><span class="fa fa-wheelchair"></span> G6</input>
+  <input type="checkbox" class="slrCls" value="G7"><span class="fa fa-wheelchair"></span> G7</input>
+  <!-- <input type="checkbox" class="btn btn-info" value="G8"><span class="fa fa-wheelchair"></span> G8</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="E9"><span class="fa fa-wheelchair"></span> E9</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="D10"><span class="fa fa-wheelchair"></span> E10</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="C11"><span class="fa fa-wheelchair"></span> C11</input> -->
+  <!-- <input type="checkbox" class="btn btn-info" value="C12"><span class="fa fa-wheelchair"></span> B12</input> -->
+</div>
+</div>
+<br><br><br>
+<div class="screen"><h6><b>ALL EYES THIS WAY<b></h6></div>
+</div>
+
+<div class="">
+  <table class="table table-bordered">
+    <thead>
       <tr>
-        <th style="text-align:center">Movie</th>
-    <th style="text-align:center">Theatre</th>
-<th style="text-align:center">Show</th>
-<th style="text-align:center">Date</th>
-</tr>
-<tr>
-      <td>{{movieName}}</td>
-      <td>{{movieTheatre}}</td>
-      <td>{{movieShow}}</td>
-      <td>{{movieDate}}</td>
-</tr>
-</table>
+        <th>Class</th>
+        <th>NO. of Seats</th>
+        <th>Total Amount</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><textarea id="seatCls" disabled="disabled"></textarea></td>
+        <td><textarea id="noOFSeats" disabled="disabled"></textarea></td>
+        <td><textarea id="totalAmount" disabled="disabled"></textarea></td>
+      </tr>
+
 </div>
-</div>
-</div>
-<div class="row">
-  <div class="col-sm-2"></div>
-				<div class="col-sm-4 well">
-          <center>
-          <table width="70%">
-            <tr><th>Class</th>
-  				<td><select class="" id="Seatclass">
-          <option>Select Class</option>
-            <option>GOLD(250/-)</option>
-            <option>SILVER(200/-)</option>
-  				</select>
-        </td></tr>
-        </table>
-      </center>
-        </div>
-        <div class="col-sm-4 well">
-          <center>
-          <table width="70%">
-            <tr><th>Number Of Seats</th>
-          <td><select class="" id="no-of-seats">
-          <option>Select Tickets</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-  				</select>
-        </td></tr>
-        </table>
-        </center>
-  </div>
-  <div class="col-xs-2"></div>
-</div>
-<br/><br/>
-          <div class="row">
-            <div class="col-sm-9">
-				<center>
-			<div class="style2"><b><h4 class="h4style" style="">GOLD CLASS (₹ 250/ )<h4></b></div>
-
-				<table style="width:50%;"  align="center" class="table table-default" id="gold">
-        <tr>
-		    <td><div align="center" class="style1" id="a01"><i class="fa fa-wheelchair"></i>A01</div></td>
-        <td><div align="center" class="style1" id="a02"><i class="fa fa-wheelchair"></i>A02</div></td>
-        <td><div align="center" class="style1" id="a03"><i class="fa fa-wheelchair"></i>A03</div></td>
-        <td><div align="center" class="style1" id="a04"><i class="fa fa-wheelchair"></i>A04</div></td>
-        <td><div align="center" class="style1" id="a05"><i class="fa fa-wheelchair"></i>A05</div></td>
-        <td><div align="center" class="style1" id="a06"><i class="fa fa-wheelchair"></i>A06</div></td>
-				<td><div align="center" class="style1" id="a07"><i class="fa fa-wheelchair"></i>A07</div></td>
-				<td><div align="center" class="style1" id="a08"><i class="fa fa-wheelchair"></i>A08</div></td>
-				<td><div align="center" class="style1" id="a09"><i class="fa fa-wheelchair"></i>A09</div></td>
-				<td><div align="center" class="style1" id="a10"><i class="fa fa-wheelchair"></i>A10</div></td>
-    </tr>
-
-    <tr>
-   <td></td>
-      <td><div align="center"class="style1"id="b2"><i class="fa fa-wheelchair"></i>B02</div></td>
-      <td><div align="center"class="style1"id="b2"><i class="fa fa-wheelchair"></i>B03</div></td>
-      <td><div align="center"class="style1"id="b3"><i class="fa fa-wheelchair"></i>B04</div></td>
-      <td><div align="center"class="style1"id="b4"><i class="fa fa-wheelchair"></i>B05</div></td>
-      <td><div align="center"class="style1"id="b6"><i class="fa fa-wheelchair"></i>B06</div></td>
-			<td><div align="center"class="style1"id="b7"><i class="fa fa-wheelchair"></i>B07</div></td>
-			<td><div align="center"class="style1"id="b8"><i class="fa fa-wheelchair"></i>B08</div></td>
-			<td><div align="center"class="style1"id="b9"><i class="fa fa-wheelchair"></i>B09</div></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td><div align="center"class="style1"id="c3"><i class="fa fa-wheelchair"></i>C03</div></td>
-    <td><div align="center"class="style1"id="c4"><i class="fa fa-wheelchair"></i>C04</div></td>
-    <td><div align="center"class="style1"id="c5"><i class="fa fa-wheelchair"></i>C05</div></td>
-    <td><div align="center"class="style1"id="c6"><i class="fa fa-wheelchair"></i>C06</div></td>
-		<td><div align="center"class="style1"id="c7"><i class="fa fa-wheelchair"></i>C07</div></td>
-	  <td><div align="center"class="style1"id="c8"><i class="fa fa-wheelchair"></i>C08</div></td>
-</tr>
-
-</table>
-<br/>
-
-<div class="style2"><b><h4 class="h4style">SILVER CLASS (₹ 200/ )<h4></b></div>
-
-
-<table style="width:50%;"  align="center" class="table table-default" id="silver">
-<tr>
-  <td><div align="center"class="style1"id="d01"><i class="fa fa-wheelchair"></i>D01</div></td>
-  <td><div align="center"class="style1"id="d02"><i class="fa fa-wheelchair"></i>D02</div></td>
-  <td><div align="center"class="style1"id="d03"><i class="fa fa-wheelchair"></i>D03</div></td>
-  <td><div align="center"class="style1"id="d04"><i class="fa fa-wheelchair"></i>D04</div></td>
-  <td><div align="center"class="style1"id="d05"><i class="fa fa-wheelchair"></i>D05</div></td>
-  <td><div align="center"class="style1"id="d06"><i class="fa fa-wheelchair"></i>D06</div></td>
-	<td><div align="center"class="style1"id="d07"><i class="fa fa-wheelchair"></i>D07</div></td>
-	<td><div align="center"class="style1"id="d08"><i class="fa fa-wheelchair"></i>D08</div></td>
-	<td><div align="center"class="style1"id="d09"><i class="fa fa-wheelchair"></i>D09</div></td>
-	<td><div align="center"class="style1"id="d10"><i class="fa fa-wheelchair"></i>D10</div></td>
-
-</tr>
-<tr>
-  <td></td>
-  <td><div align="center"class="style1"id="e02"><i class="fa fa-wheelchair"></i>E02</div></td>
-  <td><div align="center"class="style1"id="e03"><i class="fa fa-wheelchair"></i>E03</div></td>
-  <td><div align="center"class="style1"id="e04"><i class="fa fa-wheelchair"></i>E04</div></td>
-  <td><div align="center"class="style1"id="e05"><i class="fa fa-wheelchair"></i>E05</div></td>
-  <td><div align="center"class="style1"id="e06"><i class="fa fa-wheelchair"></i>E06</div></td>
-	<td><div align="center"class="style1"id="e07"><i class="fa fa-wheelchair"></i>E07</div></td>
-	<td><div align="center"class="style1"id="e08"><i class="fa fa-wheelchair"></i>E08</div></td>
-	<td><div align="center"class="style1"id="e09"><i class="fa fa-wheelchair"></i>E09</div></td>
-</tr>
-<tr>
-  <td></td>
-  <td></td>
-  <td><div align="center"class="style1"id="f03"><i class="fa fa-wheelchair"></i>F03</div></td>
-  <td><div align="center"class="style1"id="f04"><i class="fa fa-wheelchair"></i>F04</div></td>
-  <td><div align="center"class="style1"id="f05"><i class="fa fa-wheelchair"></i>F05</div></td>
-  <td><div align="center"class="style1"id="f06"><i class="fa fa-wheelchair"></i>F06</div></td>
-	<td><div align="center"class="style1"id="f07"><i class="fa fa-wheelchair"></i>F07</div></td>
-	<td><div align="center"class="style1"id="f08"><i class="fa fa-wheelchair"></i>F08</div></td>
-</tr>
-<tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td><div align="center"class="style1"id="g04"><i class="fa fa-wheelchair"></i>G04</div></td>
-  <td><div align="center"class="style1"id="g05"><i class="fa fa-wheelchair"></i>G05</div></td>
-  <td><div align="center"class="style1"id="g06"><i class="fa fa-wheelchair"></i>G06</div></td>
-	<td><div align="center"class="style1"id="g07"><i class="fa fa-wheelchair"></i>G07</div></td>
-</tr>
-	<tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td><div align="center"class="style1" id="h04"><i class="fa fa-wheelchair"></i>H04</div></td>
-  <td><div align="center"class="style1" id="h05"><i class="fa fa-wheelchair"></i>H05</div></td>
-  <td><div align="center"class="style1" id="h06"><i class="fa fa-wheelchair"></i>H06</div></td>
-	<td><div align="center"class="style1" id="h07"><i class="fa fa-wheelchair"></i>H07</div></td>
-  </tr>
-</table>
-</center>
-<div class="screen"><h4><b>SCREEN<b></h4></div>
-</div>
-<br/><br/>
-<div class="col-sm-3">
-  <div class="well" style="border-radius:0px;">
-
-        <table class="table table-default" style="height:400px;">
-          <thead>
-          <tr>
-            <td colspan="2"><h3><b> BOOKING DETAILS</b></h3></td>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td class="booktd">Seat No</td>
-            <td style="word-wrap:break-word; text-align:right;"><span id="seatno"></span></td>
-          </tr>
-          <tr>
-            <td class="booktd">No.Of Seats</td>
-            <td style="text-align:right"><span id="sno">0</span></td>
-          </tr>
-
-          <tr>
-            <td class="booktd">Amount Payable</td>
-            <td style="text-align:right; font-weight:bold; font-size:20px"><span id="amount">Rs. 0</span></td
-          </tr>
-          <tr>
-            <td colspan="2">
-							<center>
-        <button ng-click="setPrice()" class="btn btn-primary">PROCEED TO PAY</button>
-						</center>
-            </td>
-          </tr>
-        </tbody>
-        </table>
-      </div>
-</div>
-</div>
+<center><a href="#/payment" class="button-color btn btn-success" role="button">Proceed</a></center>

@@ -12,4 +12,7 @@ app.controller('TimeController',          require('./timingController'       ));
 app.controller('BookingController',       require('./bookingController'      ));
 app.controller('MappingController',       require('./mappingController'      ));
 app.controller('AdminController',         require('./adminController'        ));
-app.controller('SeatsController',        require('./seatsController'        ));
+app.controller('SeatsController',         require('./seatsController'        ));
+app.controller('PaymentController',       require('./paymentController'      ));
+app.controller('LoginController',         require('./loginController'        ));
+app.controller('RegisterController',      require('./registerController'     ));
